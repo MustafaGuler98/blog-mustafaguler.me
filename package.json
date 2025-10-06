@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "cp public/admin/config.prod.yml public/admin/config.yml && astro build",
+    "develop": "cp public/admin/config.dev.yml public/admin/config.yml && vercel dev",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -13,8 +14,6 @@
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.14.1",
-    "axios": "^1.12.2",
-    "next": "^15.5.4",
     "sharp": "^0.34.3"
   }
 }
